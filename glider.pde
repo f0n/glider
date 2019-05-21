@@ -6,7 +6,7 @@ float CLenterY = 0;
 
 // Setup the Processing Canvas
 void setup(){
-  size( 1600, 900 );
+  size( 600, 400 );
   frameRate( 200 );
   trike = loadImage("trike.png");
   prop  = loadImage("prop.png");
@@ -19,26 +19,26 @@ void draw() {
   imageMode(CENTER);
   rotation += RPM
 
-    
-  CLenterX = 10+ width/4;
+
+  CLenterX = 500+ width/4;
   CLenterY = height/4;
-  
-  
-  pushMatrix(); 
-    translate(10+width/4+12*sin(frameCount/100), 25+height/4+20*cos(frameCount/333));
+
+
+  pushMatrix();
+    translate(150+width/4+12*sin(frameCount/100), 100+height/4+20*cos(frameCount/333));
     rotate(rotation);
     image (prop, 0, 0, 130, 130);
   popMatrix();
 
-  pushMatrix(); 
-    translate(width/4+12*sin(frameCount/100), height/4+20*cos(frameCount/333));
+  pushMatrix();
+    translate(140+width/4+12*sin(frameCount/100), 75+height/4+20*cos(frameCount/333));
     rotate(radians(5)*sin(frameCount/1000));
     image (trike, 0, 0, 500, 200);
-    popMatrix();  
-      
-  line (10+width/4+12*sin(frameCount/100), 25+height/4+20*cos(frameCount/333), width/4, height);
+    popMatrix();
+
+  line (150+width/4+12*sin(frameCount/100), 75+height/4+20*cos(frameCount/333), width/2, height);
   /*
-  translate(58, 48, 0); 
+  translate(58, 48, 0);
   rotateY(0.5);
   box(40, 20, 50);*/
 }
